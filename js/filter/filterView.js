@@ -16,7 +16,8 @@ export default function render(item, arrayLength, i) {
                         </div>
                     </label>`
         });
-        return answersArr;  
+
+        return answersArr.join("");
     };
     const markup = `
         <div class="plate" data-card="2">
@@ -42,6 +43,6 @@ export default function render(item, arrayLength, i) {
             </div>
         </div>
         `;
-
+    
     document.querySelector('#app').insertAdjacentHTML('afterbegin', markup);
 }

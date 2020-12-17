@@ -7,13 +7,13 @@ export default [
 
     { 
         'id': 0,
-        'question': 'Что выведут следующие строки?<br>console.log(false && 1 && []); И console.log(\" \" && true && 5);',
-        'answers': [{'id': 1, 'text': 'logs false И logs 5'}, {'id': 2, 'text':'logs false 1 [] И logs \" \" true 5'}],
+        'question': 'Что выведут следующие строки?<br>console.log(false && 1 && []); // console.log(\" \" && true && 5);',
+        'answers': [{'id': 1, 'text': 'logs false // logs 5'}, {'id': 2, 'text':'logs false 1 [] // logs \" \" true 5'}],
         'answer': 1
     },{
         'id': 1,
-        'question': 'Что выведут следующие строки?<br>console.log(null == undefined); И console.log(null === undefined);',
-        'answers': [{'id': 1, 'text': 'logs true И logs true'}, {'id': 2, 'text': 'logs true И logs false'}],
+        'question': 'Что выведут следующие строки?<br>console.log(null == undefined); // console.log(null === undefined);',
+        'answers': [{'id': 1, 'text': 'logs true // logs true'}, {'id': 2, 'text': 'logs true // logs false'}],
         'answer': 1
     },
     {
