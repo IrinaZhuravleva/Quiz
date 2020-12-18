@@ -4,11 +4,11 @@ import * as storage from './storage.js';
 
 let index = 0;
 render(arr[0], arr.length, index);
+const a = document.getElementsByClassName('radio-block__real');
+const buttonNext = document.getElementsByClassName('button--next');
+buttonNext.disabled = 'true';
 
-// expressionNumber.innerText = `Слово: ${currentQuestionIndex + 1} из ${data.length}`;
-
-//проверить! что она должна быть пустая??
-let data = [];
+const data = [];
 
 localStorage.setItem('TestJS', JSON.stringify(data));
 // storage.set('jsQuestions', data);
@@ -32,7 +32,6 @@ localStorage.setItem('TestJS', JSON.stringify(data));
 
 function addItem({item}) {
 //     let newItem = new Question(answer);
-// debugger
     data.push(item);
 //     // storage.set('data', data);
     localStorage.setItem('TestJS', JSON.stringify(data));
@@ -55,54 +54,59 @@ function getInput(index, answer) {
 //сравнить два массива
 let answersArr = [];
 let answersData = [];
+const app = document.getElementById('app');
 
-document.getElementById('app').addEventListener('click', function (event) {
+app.addEventListener('click', function (event) {
+   
     let target = event.target;
+   
+    if (target.closest('label')) {
+        buttonNext.disabled = 'false';
+    }
     if (target.hasAttribute("data-next") ) {
-
+    
         //собрать данные с предыдущего ответа 
-        let a = document.getElementsByClassName('radio-block__real');
         
-        [...a].forEach(item => {
-            if (item.checked) {
-                console.log(item);
-                let b = getInput(index, item.value);
-                // console.log(index);
-  
-                data.push(b);
- 
-                localStorage.setItem('TestJS', JSON.stringify(data));
-                // addItem({b});
-            }
-        });
-        
-        if (index < (arr.length - 1)) {
-            this.innerHTML = '';
-            index = index + 1;
-            render(arr[index], arr.length, index);
-        } else {
-            this.innerHTML = 'Спасибо!<br><br>';
+        gettingInputData([...a], app);
+    }
+})
 
-            arr.forEach(item => {
-                item = new Answer(item.id, item.answer);
-                // newItem;
-                answersArr.push(item);
-            })
-            data.forEach(item => {
-                item = new Answer(item.id, +(item.answer));
-                answersData.push(item);
-            })
+function gettingInputData(array, page) {
+    array.forEach(item => {
+        if (item.checked) {
+            // item.style.backgroundColor = "blue";
+            // console.log(item);
+            let b = getInput(index, item.value);
+            data.push(b);
 
-            for (var i = 0; i < answersArr.length; i++) {
-                if (answersArr[i].answer != answersData[i].answer) {
-                    console.log(`Ответ ${(answersData[i].id + 1)}  - неправильный`);
-                    this.insertAdjacentHTML('beforeend', `Ответ ${(answersData[i].id + 1)}  - неправильный<br>`);
-                    //при клике рендерится текст вопроса, на который дан неправильный ответ
+            localStorage.setItem('TestJS', JSON.stringify(data));
+            // addItem({b});
+            if (index < (arr.length - 1)) {
+                page.innerHTML = '';
+                index = index + 1;
+                render(arr[index], arr.length, index);
+            } else {
+                page.innerHTML = 'Спасибо!<br><br>';
+
+                array.forEach(item => {
+                    item = new Answer(item.id, item.answer);
+                    answersArr.push(item);
+                })
+                data.forEach(item => {
+                    item = new Answer(item.id, +(item.answer));
+                    answersData.push(item);
+                })
+
+                for (var i = 0; i < answersArr.length; i++) {
+                    if (answersArr[i].answer != answersData[i].answer) {
+                        page.insertAdjacentHTML('beforeend', `Ответ ${(answersData[i].id + 1)}  - неправильный<br>`);
+                        //при клике рендерится текст вопроса, на который дан неправильный ответ
+                    }
                 }
             }
         }
-    }
-})
+    });
+}
 
 
 
