@@ -969,4 +969,21 @@ body {
 .strong {
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .plate {
+    width: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+  .plate {
+    width: 700px;
+  }
+}
+
+@media (max-width: 786px) {
+  .plate {
+    width: 400px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
