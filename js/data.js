@@ -81,32 +81,30 @@ export default [
         'answers': [{ 'id': 1, 'text': '1'}, { 'id': 2, 'text': '2'}, { 'id': 3, 'text': '3'}],
         'answer': 1
         // compilation and execution.
-    }, {
-        'id': 14,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
-    }, {
-        'id': 15,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
-    }, {
-        'id': 15,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
-    }, {
-        'id': 15,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
-    }, {
-        'id': 15,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
+    // }, {
+    //     'id': 14,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 0
+    // }, {
+    //     'id': 15,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 0
+    // }, {
+    //     'id': 15,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 0
+    // }, {
+    //     'id': 15,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 0
+    // }, {
+    //     'id': 15,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 0
     }
-
-
 ]
