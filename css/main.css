@@ -986,4 +986,24 @@ body {
     width: 100%;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+@media (max-width: 565px) {
+  .title-main {
+    font-size: 19px;
+  }
+  .plate {
+    height: auto;
+  }
+  .plate-content {
+    padding: 20px 15px 25px;
+  }
+  .radio-block {
+    padding: 15px 5px;
+    
+    height: auto;
+  }
+  .radio-block__text{
+    font-size: 16px;
+  }
+}
+
