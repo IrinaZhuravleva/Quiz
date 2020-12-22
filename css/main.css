@@ -977,7 +977,7 @@ body {
 
 @media (max-width: 992px) {
   .plate {
-    width: 700px;
+    width: 100%;
   }
 }
 
@@ -986,4 +986,3 @@ body {
     width: 100%;
   }
 }
-/*# sourceMappingURL=main.css.map */
