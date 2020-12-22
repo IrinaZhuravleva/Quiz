@@ -81,11 +81,11 @@ export default [
         'answers': [{ 'id': 1, 'text': '1'}, { 'id': 2, 'text': '2'}, { 'id': 3, 'text': '3'}],
         'answer': 1
         // compilation and execution.
-    // }, {
-    //     'id': 14,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    //     'answer': 0
+    }, {
+        'id': 14,
+        'question': 'function myFavoriteFunc(a) {<br />if (true) {<br />var b = "Hello " + a;<br />}<br />return b;<br />}<br />myFavoriteFunc("World");<br />console.log(a); <br />console.log(b); ',
+        'answers': [{ 'id': 1, 'text': 'a is not defined'}, { 'id': 2, 'text': 'Hello World'}],
+        'answer': 0
     // }, {
     //     'id': 15,
     //     'question': '',
