@@ -4,7 +4,6 @@ import * as storage from './storage.js';
 
 let index = 0;
 render(arr[0], arr.length, index);
-console.log(arr);
 const a = document.getElementsByClassName('radio-block__real');
 const buttonNext = document.getElementsByClassName('button--next');
 buttonNext.disabled = 'true';
@@ -12,6 +11,33 @@ buttonNext.disabled = 'true';
 const data = [];
 
 localStorage.setItem('TestJS', JSON.stringify(data));
+// storage.set('jsQuestions', data);
+
+
+// const Question = function ( id, answer ) {
+
+//     this.id = id;
+//     // this.question = question;
+//     this.answer = answer;
+// }
+
+// function addItem({answer}) {
+//     let newItem = new Question(answer);
+//     data.push(newItem);
+//     // storage.set('data', data);
+//     localStorage.setItem('TestJS', JSON.stringify(data));
+// }
+
+
+
+function addItem({
+    item
+}) {
+    //     let newItem = new Question(answer);
+    data.push(item);
+    //     // storage.set('data', data);
+    localStorage.setItem('TestJS', JSON.stringify(data));
+}
 
 //собрать данные с предыдущего ответа 
 const Answer = function (id, answer) {
@@ -28,19 +54,21 @@ function getInput(index, answer) {
 }
 
 //сравнить два массива
-// const answersArr = arr;
-const answersData = [];
+const answersArr = [];
+let answersData = [];
 const app = document.getElementById('app');
 
-app.addEventListener('click', function (event) {   
+app.addEventListener('click', function (event) {
+
     let target = event.target;
-   
+
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
     }
+    if (target.hasAttribute("data-next")) {
 
-    if (target.hasAttribute("data-next") ) {
-        //собрать данные с предыдущего ответа
+        //собрать данные с предыдущего ответа 
+
         gettingInputData([...a], app);
     }
 })
@@ -58,29 +86,28 @@ function gettingInputData(array, page) {
             if (index < (arr.length - 1)) {
                 page.innerHTML = '';
                 index = index + 1;
-                // debugger
                 render(arr[index], arr.length, index);
             } else {
                 page.innerHTML = 'Спасибо!<br><br>';
+
+                array.forEach(item => {
+                    item = new Answer(item.id, item.answer);
+                    answersArr.push(item);
+                })
                 data.forEach(item => {
                     item = new Answer(item.id, +(item.answer));
                     answersData.push(item);
                 })
 
-                // for (var i = 0; i < answersArr.length; i++) {
-                for (var i = 0; i < arr.length; i++) {
-                    if (arr[i].answer != answersData[i].answer) {
-                       
-                        // page.insertAdjacentHTML('beforeend', `Ответ ${(answersData[i].id + 1)}  - неправильный<br>`);
-                        var j = +(answersData[i].answer);
-                        page.insertAdjacentHTML('beforeend', `Ответ ${(answersData[i].id + 1)}  - неправильный<br><br>Вопрос: ${arr[i].question}<br ><br>Правильный ответ: ${arr[i].answers[j].text}<br>`);
+                for (var i = 0; i < answersArr.length; i++) {
+                    if (answersArr[i].answer != answersData[i].answer) {
+                        console.log(answersArr[i].answer);
+                        console.log(answersData[i].answer);
+                        page.insertAdjacentHTML('beforeend', `Ответ ${(answersData[i].id + 1)}  - неправильный<br>`);
                         //при клике рендерится текст вопроса, на который дан неправильный ответ
                     }
-                } 
+                }
             }
         }
     });
 }
-
-
-

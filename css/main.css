@@ -17,7 +17,7 @@ body {
 }
 .plate {
   width: 1170px;
-  height: 545px;
+  /* height: 545px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -969,6 +969,25 @@ body {
 .strong {
   font-weight: 700;
 }
+
+.btn-example {
+  display: block;
+  margin: 10px auto;
+}
+
+.div-1 {
+  margin-top: 10px;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid green;
+}
+
+.div-2 {
+  text-align: center;
+  border: 1px solid yellow;
+}
+
+
 @media (max-width: 1200px) {
   .plate {
     width: 800px;
