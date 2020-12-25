@@ -84,9 +84,6 @@ export default [
         'answers': [{ 'id': 1, 'text': 'a is not defined'}, { 'id': 2, 'text': 'Hello World'}],
         'answer': 1
 
-
-
-
     // // }, {
     // //     'id': 15,
     // //     'question': '',
