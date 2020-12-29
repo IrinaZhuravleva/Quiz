@@ -4,6 +4,7 @@ export default [
         'question': 'Что выведут следующие строки?<br>console.log(false && 1 && []); // console.log(\" \" && true && 5);',
         'answers': [{'id': 1, 'text': 'false // 5'}, {'id': 2, 'text':'false 1 [] // \" \" true 5'}],
         'answer': 1
+        // returns the first falsy expression or the last expression
     },{
         'id': 1,
         'question': 'Что выведут следующие строки?<br>console.log(null == undefined); // console.log(null === undefined);',
@@ -81,26 +82,51 @@ export default [
         'question': 'function myFavoriteFunc(a) {<br />if (true) {<br />var b = "Hello " + a;<br />}<br />return b;<br />}<br />myFavoriteFunc("World");<br />console.log(a); <br />console.log(b); ',
         'answers': [{ 'id': 1, 'text': 'a is not defined'}, { 'id': 2, 'text': 'Hello World'}],
         'answer': 1
-
     }, {
         'id': 15,
         'question': 'What are the falsy values in JavaScript?',
         'answers': [{ 'id': 1, 'text': '[\'\', 0, null, undefined, NaN, false];'}, { 'id': 2, 'text': '[undefined, NaN, false];'}],
-        'answer': 0
+        'answer': 1
     }, {
         'id': 16,
         'question': '  "\"use strict\";<br />function showMeThis(){<br />return this;<br />}<br />showMeThis();',
         'answers': [{ 'id': 1, 'text': 'Консоль выведет объект Windows' }, { 'id': 2, 'text': 'Консоль выведет undefined'}],
-        'answer': 0
+        'answer': 1
     }, {
         'id': 17,
-        'question': '',
-        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-        'answer': 0
-    // // }, {
-    // //     'id': 15,
-    // //     'question': '',
-    // //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    // //     'answer': 0
+        'question': 'Можно ли продублировать имя переменной? <br />function someFunc(a, b, b, c){<br />}',
+        'answers': [{ 'id': 1, 'text': 'нет'}, { 'id': 2, 'text': 'да'}],
+        'answer': 2
+        // yes with "use strict";
+    }, {
+        'id': 18,
+        'question': 'function logName(name) {<br />var n = name || "Mark";<br />console.log(n);<br />}<br />logName(); ',
+        'answers': [{ 'id': 1, 'text': 'name'}, { 'id': 2, 'text': 'Mark'}],
+        'answer': 1
+    }, {
+        'id': 19,
+        'question': 'const carDetails = {<br />name: "Ford Mustang",<br />yearBought: 2005,<br />getName(){<br />return this.name;<br />},<br />isRegistered: true<br /}<br /;var name = "Ford Ranger";<br />var getCarName = carDetails.getName;<br />console.log(getCarName());<br />   console.log(getCarName.apply(carDetails));',
+        'answers': [{ 'id': 1, 'text': 'Ford Mustang//Ford Mustang'}, { 'id': 2, 'text': 'Ford Ranger//Ford Mustang'}],
+        'answer': 2
+    // }, {
+    //     'id': ,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 1
+    // }, {
+    //     'id': ,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 1
+    // }, {
+    //     'id': ,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 1
+    // }, {
+    //     'id': ,
+    //     'question': '',
+    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'answer': 1
     }
 ]
