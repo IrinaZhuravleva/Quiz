@@ -108,11 +108,14 @@ export default [
         'question': 'const carDetails = {<br />name: "Ford Mustang",<br />yearBought: 2005,<br />getName(){<br />return this.name;<br />},<br />isRegistered: true<br /}<br /;var name = "Ford Ranger";<br />var getCarName = carDetails.getName;<br />console.log(getCarName());<br />   console.log(getCarName.apply(carDetails));',
         'answers': [{ 'id': 1, 'text': 'Ford Mustang//Ford Mustang'}, { 'id': 2, 'text': 'Ford Ranger//Ford Mustang'}],
         'answer': 2
-    // }, {
-    //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    //     'answer': 1
+    }, {
+        'id': 20,
+        'question': 'console.log(o.toString === Object.prototype.toString);',
+        'answers': [{ 'id': 1, 'text': 'true'}, { 'id': 2, 'text': 'false'}],
+        'answer': 1
+            // The end of the Prototype Chain is the Object.prototype.
+        // A prototype in simplest terms is a blueprint of an object.It is used as a fallback for properties 
+        // and methods if it does exist in the current object.
     // }, {
     //     'id': ,
     //     'question': '',
