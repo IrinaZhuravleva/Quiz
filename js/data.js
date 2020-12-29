@@ -33,7 +33,7 @@ export default [
         'question': 'How many phases does Event Propagation have?',
         'answers': [{ 'id': 1, 'text': '1'}, { 'id': 2, 'text': '2'}, { 'id': 3, 'text': '3'}],
         'answer': 3
-        
+        // Capturing Phase , Target Phase, Bubbling Phase
     }, {
         'id': 6,  
         'question': 'On which element will be event.target if button clicked?<br>AddEventListener is on green box.<div class="div-1" onclick="clickFunc(event)"><div class="div-2"><button class="btn-example">Button</button></div></div>',
@@ -41,7 +41,7 @@ export default [
         'answer': 3
     }, {
         'id': 7,  
-        'question': 'On which element will be event.currentTarget if button clicked?<br>AddEventListener is on green box.<div class="div-1" onclick="clickFunc(event)><div class="div-2"><button class="btn-example">Button</button></div></div>',
+        'question': 'On which element will be event.currentTarget if button clicked?<br>AddEventListener is on green box.<div class="div-1" onclick="clickFunc(event)"><div class="div-2"><button class="btn-example">Button</button></div></div>',
         'answers': [{ 'id': 1, 'text': 'green box'}, {'id': 2, 'text': 'yellow box'}, {'id': 3, 'text': 'button'}],
         'answer': 1
     }, {
@@ -54,14 +54,13 @@ export default [
         'question': 'let a = { a: 1 };<br>let b = { a: 1 };<br>let c = a;<br><br>console.log(a === b);<br>console.log(a === c);',
         'answers': [{ 'id': 1, 'text': 'true // true'}, { 'id': 2, 'text': 'false // true'}],
         'answer': 2
+            // == (abstract equality) and === (strict equality) 
     }, {
         'id': 10,  
         'question': 'console.log(!!0);<br>console.log(!!1);<br>console.log(!![].length);',
         'answers': [{ 'id': 1, 'text': 'true // true // false' }, { 'id': 2, 'text': 'false // true // false' }, { 'id': 3, 'text': 'true // true // true'}],
         'answer': 2
-
-    }
-    , { 
+    }, { 
         'id': 11,
         'question': 'Чему равен х?<br>let x = 5;<br>x = (x++ , x = addFive(x), x *= 2, x -= 5, x += 10);<br>function addFive(num) {<br>return num + 5;<br>}',
         'answers': [{'id': 1, 'text': '-5'}, {'id': 2, 'text': '22'}, {'id': 3, 'text': '27'}],
@@ -74,31 +73,30 @@ export default [
     }, {
         'id': 13,
         'question': 'Cколько фаз имеет Execution Context у Hoisting?',
-        'answers': [{ 'id': 1, 'text': '1'}, { 'id': 2, 'text': '2'}, { 'id': 3, 'text': '3'}],
-        'answer': 2
-        // compilation and execution.????
-                //сверила ответы до этого пункта
+        'answers': [{ 'id': 1, 'text': '1 (compilation and execution)' }, { 'id': 2, 'text': '2 (capture, compilation and execution)'}, { 'id': 3, 'text': '3'}],
+        'answer': 1
+        //сверила ответы до этого пункта
     }, {
         'id': 14,
         'question': 'function myFavoriteFunc(a) {<br />if (true) {<br />var b = "Hello " + a;<br />}<br />return b;<br />}<br />myFavoriteFunc("World");<br />console.log(a); <br />console.log(b); ',
         'answers': [{ 'id': 1, 'text': 'a is not defined'}, { 'id': 2, 'text': 'Hello World'}],
         'answer': 1
 
-    // // }, {
-    // //     'id': 15,
-    // //     'question': '',
-    // //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    // //     'answer': 0
-    // // }, {
-    // //     'id': 15,
-    // //     'question': '',
-    // //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    // //     'answer': 0
-    // // }, {
-    // //     'id': 15,
-    // //     'question': '',
-    // //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
-    // //     'answer': 0
+    }, {
+        'id': 15,
+        'question': 'What are the falsy values in JavaScript?',
+        'answers': [{ 'id': 1, 'text': '[\'\', 0, null, undefined, NaN, false];'}, { 'id': 2, 'text': '[undefined, NaN, false];'}],
+        'answer': 0
+    }, {
+        'id': 16,
+        'question': '  "\"use strict\";<br />function showMeThis(){<br />return this;<br />}<br />showMeThis();',
+        'answers': [{ 'id': 1, 'text': 'Консоль выведет объект Windows' }, { 'id': 2, 'text': 'Консоль выведет undefined'}],
+        'answer': 0
+    }, {
+        'id': 17,
+        'question': '',
+        'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+        'answer': 0
     // // }, {
     // //     'id': 15,
     // //     'question': '',
