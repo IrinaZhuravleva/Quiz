@@ -110,7 +110,7 @@ export default [
         'answer': 2
     }, {
         'id': 20,
-        'question': 'console.log(o.toString === Object.prototype.toString);',
+        'question': 'const o = {};<br />console.log(o.toString === Object.prototype.toString);',
         'answers': [{ 'id': 1, 'text': 'true'}, { 'id': 2, 'text': 'false'}],
         'answer': 1
             // The end of the Prototype Chain is the Object.prototype.
