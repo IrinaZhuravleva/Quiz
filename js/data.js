@@ -116,20 +116,49 @@ export default [
             // The end of the Prototype Chain is the Object.prototype.
         // A prototype in simplest terms is a blueprint of an object.It is used as a fallback for properties 
         // and methods if it does exist in the current object.
+    }, {
+        'id': 21,
+        'question': 'const details = {<br />message: \'Hello World!\'<br />};<br />function getMessage(){<br />return this.message;<br />}<br />getMessage.apply(details);',
+        'answers': [{ 'id': 1, 'text': 'Hello World!'}, { 'id': 2, 'text': 'undefined'}],
+        'answer': 1
+        //  The apply invokes a function specifying 
+        //  the 'this' or the "owner" object of that function on that time of invocation.
+    }, {
+        'id': 22,
+        'question': 'Что сделает данная функция?<br />function one() {<br />return Array.prototype.slice.call(arguments);<br />}',
+        'answers': [{ 'id': 1, 'text': 'converts the arguments object into an array' }, { 'id': 2, 'text': 'converts the arguments object into a string'}],
+        'answer': 1
+        //question 37 
+        
+    }, {
+        'id': 23,
+        'question': 'Какая из функций вернет объект с аргументами?<br />function one() {<br />return arguments;<br />}<br /><br />const two = () => arguments;',
+        'answers': [{ 'id': 1, 'text': 'обе'}, { 'id': 2, 'text': 'первая'}, { 'id': 3, 'text': 'вторая'}],
+        'answer': 2
+    }, {
+        'id': 24,
+        'question': 'Вернет ли стрелочная функция объект с аргументами?<br />const four = (...args) => args;';
+        'answers': [{ 'id': 1, 'text': 'да' }, { 'id': 2, 'text': 'нет' }],
+        'answer': 1
     // }, {
     //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'question': '';
+    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     // }, {
     //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'question': '';
+    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     // }, {
     //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': ''}, { 'id': 2, 'text': ''}],
+    //     'question': '';
+    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+    //     'answer': 1
+    // }, {
+    //     'id': ,
+    //     'question': '';
+    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     }
 ]
