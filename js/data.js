@@ -170,18 +170,14 @@ export default [
         // Variables declared with let and const keyword are block scoped.
     }, {
         'id': 29,
-        'question': `Как это называется?
+        'question': `Как это называется?<br />
         let { firstName, lastName, position, yearHired } = employee;`,
         'answers': [{ 'id': 1, 'text': ' object structuring' }, { 'id': 2, 'text': ' object destructuring' }, , { 'id': 3, 'text': 'так нельзя записать' }],
         'answer': 2
     }, {
         'id': 30,
-        'question': `Как называется функция clickClick?
-                    const btnAdd = document.getElementById('btnAdd');
-                        btnAdd.addEventListener('click', function clickClick(e) {
-                            // do something useless
-                    });`,
-        'answers': [{ 'id': 1, 'text': 'Rubbish functions' }, { 'id': 2, 'text': 'Callback function' }],
+        'question': `Как называется функция clickClick?<br />const btnAdd = document.getElementById('btnAdd');<br />btnAdd.addEventListener('click', function clickClick(e) {<br />});`,
+        'answers': [{ 'id': 1, 'text': 'Rubbish function' }, { 'id': 2, 'text': 'Callback function' }],
         'answer': 2
     }, {
         'id': 31,
@@ -200,27 +196,89 @@ export default [
         // The Promise constructor has two parameters which are functions resolve and reject respectively.
     }, {
         'id': 33,
-        'question': `function add(...rest) {
-                return rest.reduce((total,current) => total + current);
-                };
-
-                console.log(add(1, 2));
+        'question': `Spread operator<br />function add(...rest) {<br />
+                return rest.reduce((total,current) => total + current);<br />
+                };<br /><br />
+                console.log(add(1, 2));<br />
                 console.log(add(1, 2, 3, 4, 5));`,
         'answers': [{ 'id': 1, 'text': 'undefined' }, { 'id': 2, 'text': '3//15' }],
         'answer': 2
-    // }, {
+    }, {
+        'id': 34,
+        'question': `Rest operator<br />const [first, ...others] = [1, 2, 3, 4, 5];<br />
+            console.log(others);`,
+        'answers': [{ 'id': 1, 'text': '1, 2, 3, 4, 5' }, { 'id': 2, 'text': 'undefined' }, { 'id': 3, 'text': '2, 3, 4, 5' }],
+        'answer': 3
+    }, {
+        'id': 33,
+        'question': `function getFirst([first, ...rest] = [0, 1]) {<br />
+                        return first;<br />
+                    }<br /><br />
+
+                    getFirst();<br />
+                    getFirst([10,20,30]);`,
+        'answers': [{ 'id': 1, 'text': 'undefined' }, { 'id': 2, 'text': '0 // 10' }],
+        'answer': 1
+    }, {
+        'id': 34,
+        'question': `function getArr({ nums } = { nums: [1, 2, 3, 4] }){<br />
+            return nums;<br />
+        }<br /><br />
+
+        getArr({nums:[5,4,3,2,1]});`,
+        'answers': [{ 'id': 1, 'text': '1, 2, 3, 4' }, { 'id': 2, 'text': '5,4,3,2,1' }, { 'id': 3, 'text': 'undefined' }],
+        'answer': 2
+    }, {
+        'id': 35,
+        'question': `console.log(1 + '6');<br />
+                        console.log(false + true);<br />
+                        console.log(6 * '2');`,
+        'answers': [{ 'id': 1, 'text': '16 // 1 // 12' }, { 'id': 2, 'text': '7 // undefined // 12' }, { 'id': 2, 'text': '7 // 0 // undefined' }],
+        'answer': 1
+    }, {
+        'id': 36,
+        'question': `const o = { <br />
+            "prop" : "bwahahah",<br />
+            "prop2" : "hweasa"<br />
+            };<br /><br />
+
+            console.log("prop" in o); <br />
+            console.log("prop1" in o);`,
+        'answers': [{ 'id': 1, 'text': 'undefined' }, { 'id': 2, 'text': 'true/false' }],
+        'answer': 2
+    }, {
+        'id': 37,
+        'question': `const o = { <br />
+                    "prop": "bwahahah",<br />
+                    "prop2": "hweasa"<br />
+                };<br /><br />
+                console.log("toString" in o);<br />
+                console.log(o.hasOwnProperty("toString"));`,
+        'answers': [{ 'id': 1, 'text': 'true // false' }, { 'id': 2, 'text': 'true // true' }],
+        'answer': 1
+     }, {
+        'id': 38,
+        'question': `What are the ways to deal with Asynchronous Code in JavasScript?`,
+        'answers': [{ 'id': 1, 'text': 'Promises, async/await, Libraries like async.js, bluebird' }, { 'id': 2, 'text': 'Callbacks, Promises, async/await, Libraries like async.js, bluebird' }],
+        'answer': 2
+     }, {
+        'id': 39,
+        'question': `functionExpression();<br />
+            functionDeclaration();<br /><br />
+
+            function functionExpression(){<br />
+            console.log("I am a function expression");<br />
+            }<br /><br />
+
+            let functionDeclaration = function(){<br />
+            console.log("I am a function declaration");
+}`,
+        'answers': [{ 'id': 1, 'text': 'I am a function expression // error' }, { 'id': 2, 'text': 'I am a function expression // I am a function declaration' }],
+        'answer': 1
+        //I am a function declaration не всплывает I wont be hoisted
+     // }, {
     //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-    //     'answer': 1
-    // }, {
-    //     'id': ,
-    //     'question': '',
-    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-    //     'answer': 1
-    // }, {
-    //     'id': ,
-    //     'question': '',
+    //     'question': ``,
     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     }
