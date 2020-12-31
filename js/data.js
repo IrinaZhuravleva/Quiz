@@ -140,6 +140,39 @@ export default [
         'question': 'Вернет ли стрелочная функция объект с аргументами?<br />const four = (...args) => args;';
         'answers': [{ 'id': 1, 'text': 'да' }, { 'id': 2, 'text': 'нет' }],
         'answer': 1
+    }, {
+        'id': 25,
+        'question': '   const o1 = {};<br />console.log(o1.toString()); <br /><br />const o2 = Object.create(null);<br />console.log(o2.toString());';
+        'answers': [{ 'id': 1, 'text': '[object Object]//error' }, { 'id': 2, 'text': '[object Object]//[object Object]' }],
+        'answer': 1
+        // We can create an object without a prototype using the Object.create method.
+    }, {
+        'id': 26,
+        'question': 'Как читается код? Справа налево или слева направо?<br /> function myFunc() {<br />let a = b = 0;<br />}<br /><br />myFunc();';
+        'answers': [{ 'id': 1, 'text': 'Справа налево' }, { 'id': 2, 'text': 'Слева направо' }],
+        'answer': 1
+        // The reason for this is that assignment operator or = has right- to - left associativity or evaluation.
+        // The JS Engine makes a global variable b outside this function after that 
+        // the return value of the expression b = 0 would be 0 and 
+        // it's assigned to the new local variable a with a let keyword.
+    }, {
+        'id': 27,
+        'question': 'function giveMeX(showX) {<br />if (showX) {<br />var x = 5;<br />}<br />return x;<br /}<br /> <br /console.log(giveMeX(false));<br /console.log(giveMeX(true));',
+        'answers': [{ 'id': 1, 'text': 'undefined//5' }, { 'id': 2, 'text': 'ReferenceError' }],
+        'answer': 1
+        // Variables declared with var keyword are function scoped.
+        // If you are wondering why it logs undefined in the first console.log statement remember variables declared without an initial value has a default value of undefined.
+    }, {
+        'id': 28,
+        'question': 'function giveMeX(showX) {<br />if (showX) {<br />let x = 5;<br />}<br />return x;<br /}<br /> <br /console.log(giveMeX(false));<br /console.log(giveMeX(true));',
+        'answers': [{ 'id': 1, 'text': 'undefined//5' }, { 'id': 2, 'text': 'ReferenceError' }],
+        'answer': 2
+        // Variables declared with let and const keyword are block scoped.
+    // }, {
+    //     'id': ,
+    //     'question': '';
+    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+    //     'answer': 1
     // }, {
     //     'id': ,
     //     'question': '';
