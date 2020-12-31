@@ -168,16 +168,46 @@ export default [
         'answers': [{ 'id': 1, 'text': 'undefined//5' }, { 'id': 2, 'text': 'ReferenceError' }],
         'answer': 2
         // Variables declared with let and const keyword are block scoped.
-    // }, {
-    //     'id': ,
-    //     'question': '';
-    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-    //     'answer': 1
-    // }, {
-    //     'id': ,
-    //     'question': '';
-    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-    //     'answer': 1
+    }, {
+        'id': 29,
+        'question': `Как это называется?
+        let { firstName, lastName, position, yearHired } = employee;`,
+        'answers': [{ 'id': 1, 'text': ' object structuring' }, { 'id': 2, 'text': ' object destructuring' }, , { 'id': 3, 'text': 'так нельзя записать' }],
+        'answer': 2
+    }, {
+        'id': 30,
+        'question': `Как называется функция clickClick?
+                    const btnAdd = document.getElementById('btnAdd');
+                        btnAdd.addEventListener('click', function clickClick(e) {
+                            // do something useless
+                    });`,
+        'answers': [{ 'id': 1, 'text': 'Rubbish functions' }, { 'id': 2, 'text': 'Callback function' }],
+        'answer': 2
+    }, {
+        'id': 31,
+        'question': 'Сколько состояний у промиса?',
+        'answers': [{ 'id': 1, 'text': '1' }, { 'id': 2, 'text': '2' }, { 'id': 3, 'text': '3' }],
+        'answer': 3
+//      Pending - The initial state of a promise.The promise's outcome has not yet been known because the operation has not been completed yet.
+//      Fulfilled - The async operation is completed and successful with the resulting value.
+//      Rejected - The async operation has failed and has a reason on why it failed.
+//      Settled - If the promise has been either Fulfilled or Rejected.
+    }, {
+        'id': 32,
+        'question': 'Сколько параметров у промиса?',
+        'answers': [{ 'id': 1, 'text': '1' }, { 'id': 2, 'text': '2' }, { 'id': 3, 'text': '3' }],
+        'answer': 2
+        // The Promise constructor has two parameters which are functions resolve and reject respectively.
+    }, {
+        'id': 33,
+        'question': `function add(...rest) {
+                return rest.reduce((total,current) => total + current);
+                };
+
+                console.log(add(1, 2));
+                console.log(add(1, 2, 3, 4, 5));`,
+        'answers': [{ 'id': 1, 'text': 'undefined' }, { 'id': 2, 'text': '3//15' }],
+        'answer': 2
     // }, {
     //     'id': ,
     //     'question': '';
