@@ -137,18 +137,18 @@ export default [
         'answer': 2
     }, {
         'id': 24,
-        'question': 'Вернет ли стрелочная функция объект с аргументами?<br />const four = (...args) => args;';
+        'question': 'Вернет ли стрелочная функция объект с аргументами?<br />const four = (...args) => args;',
         'answers': [{ 'id': 1, 'text': 'да' }, { 'id': 2, 'text': 'нет' }],
         'answer': 1
     }, {
         'id': 25,
-        'question': '   const o1 = {};<br />console.log(o1.toString()); <br /><br />const o2 = Object.create(null);<br />console.log(o2.toString());';
+        'question': '   const o1 = {};<br />console.log(o1.toString()); <br /><br />const o2 = Object.create(null);<br />console.log(o2.toString());',
         'answers': [{ 'id': 1, 'text': '[object Object]//error' }, { 'id': 2, 'text': '[object Object]//[object Object]' }],
         'answer': 1
         // We can create an object without a prototype using the Object.create method.
     }, {
         'id': 26,
-        'question': 'Как читается код? Справа налево или слева направо?<br /> function myFunc() {<br />let a = b = 0;<br />}<br /><br />myFunc();';
+        'question': 'Как читается код? Справа налево или слева направо?<br /> function myFunc() {<br />let a = b = 0;<br />}<br /><br />myFunc();',
         'answers': [{ 'id': 1, 'text': 'Справа налево' }, { 'id': 2, 'text': 'Слева направо' }],
         'answer': 1
         // The reason for this is that assignment operator or = has right- to - left associativity or evaluation.
@@ -210,17 +210,17 @@ export default [
         'answer': 2
     // }, {
     //     'id': ,
-    //     'question': '';
+    //     'question': '',
     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     // }, {
     //     'id': ,
-    //     'question': '';
+    //     'question': '',
     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     // }, {
     //     'id': ,
-    //     'question': '';
+    //     'question': '',
     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
     //     'answer': 1
     }
