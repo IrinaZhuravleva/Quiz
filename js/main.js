@@ -6,6 +6,7 @@ const app = document.getElementById('app');
 const a = document.getElementsByClassName('radio-block__real');
 const buttonNext = document.getElementsByClassName('button--next');
 
+
 let index = 0;
 render(arr[0], arr.length, index);
 
@@ -28,6 +29,15 @@ app.addEventListener('click', function (event) {
     if (target.hasAttribute("data-next") ) {
         //собрать данные с предыдущего ответа
         gettingInputData([...a], app);
+    }
+    if (target.hasAttribute("data-prev")) {
+        //index надо брать из номера вопроса, например
+    //     app.innerHTML = '';
+        let itemId = document.querySelector('#hidden').innerText;
+            console.log(itemId);
+    //     render(arr[index - 1], arr.length, (index - 1));
+    //     index = index - 1;
+    //     //перезаписать локал сторидж
     }
 });
 

@@ -59,18 +59,19 @@ let answersData = [];
 const app = document.getElementById('app');
 
 app.addEventListener('click', function (event) {
-
+debugger
     let target = event.target;
 
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
     }
+
     if (target.hasAttribute("data-next")) {
 
         //собрать данные с предыдущего ответа 
-
         gettingInputData([...a], app);
     }
+
 })
 
 function gettingInputData(array, page) {

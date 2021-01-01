@@ -74,8 +74,8 @@ export default [
     }, {
         'id': 13,
         'question': 'Cколько фаз имеет Execution Context у Hoisting?',
-        'answers': [{ 'id': 1, 'text': '1 (compilation and execution)' }, { 'id': 2, 'text': '2 (capture, compilation and execution)'}, { 'id': 3, 'text': '3'}],
-        'answer': 1
+        'answers': [{ 'id': 1, 'text': '1 (compilation)' }, { 'id': 2, 'text': '2 (compilation and execution)'}, { 'id': 3, 'text': '3 (capture, compilation and execution)'}],
+        'answer': 2
         //сверила ответы до этого пункта
     }, {
         'id': 14,
@@ -105,7 +105,15 @@ export default [
         'answer': 1
     }, {
         'id': 19,
-        'question': 'const carDetails = {<br />name: "Ford Mustang",<br />yearBought: 2005,<br />getName(){<br />return this.name;<br />},<br />isRegistered: true<br /}<br /;var name = "Ford Ranger";<br />var getCarName = carDetails.getName;<br />console.log(getCarName());<br />   console.log(getCarName.apply(carDetails));',
+        'question': `const carDetails = {<br />
+        name: "Ford Mustang",<br />
+        getName(){<br />return this.name;<br />
+        },<br />
+        }<br />;
+        var name = "Ford Ranger";<br />
+        var getCarName = carDetails.getName;<br />
+        console.log(getCarName());<br />
+        console.log(getCarName.apply(carDetails));`,
         'answers': [{ 'id': 1, 'text': 'Ford Mustang//Ford Mustang'}, { 'id': 2, 'text': 'Ford Ranger//Ford Mustang'}],
         'answer': 2
     }, {

@@ -994,6 +994,32 @@ body {
   }
 }
 
+@media (max-width: 1024px){
+  .title-main {
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .plate-header{
+    height: 50px;
+  }
+  .plate-header__title{
+    font-size: 18px;
+  }
+  .plate-content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .plate-footer{
+    height: auto;
+    padding: 7px 30px;
+  }
+  .button{
+    height: auto;
+    padding: 7px 20px;
+  }
+}
+
 @media (max-width: 992px) {
   .plate {
     width: 100%;

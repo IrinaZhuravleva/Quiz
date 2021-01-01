@@ -30,13 +30,13 @@ export default function render(item, arrayLength, i) {
                 </div>
             </div>
             <div class="plate-content">
-                <div class="hidden">${item.id}</div>
+                <div id="hidden" class="hidden">${item.id}</div>
                 <h2 class="title-main" data-question>${item.question}</h2>
                 <div class="radio-group">${renderAnswers(item.answers)}</div>
             </div>
             <div class="plate-footer">
                 <div class="plate-footer__buttons">
-                    <button class="button button--back" data-nav="prev">Назад</button>
+                    <button class="button button--back" data-prev>Назад</button>
                     <button val="index" class="button button--next" data-next>Далее</button>
 
                 </div>
