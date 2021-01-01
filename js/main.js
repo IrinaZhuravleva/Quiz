@@ -71,7 +71,7 @@ function gettingInputData(array, page) {
                 for (let i = 0; i < arr.length; i++) {
                     if (arr[i].answer != answersData[i].answer) {
                         let j = (arr[i].answers).findIndex(item => item.id === arr[i].answer);
-                        page.insertAdjacentHTML('beforeend', `<b>Ответ ${(answersData[i].id + 1)}  - неправильный</b><br><br><i>Вопрос: </i>${arr[i].question}<br><br><i>Правильный ответ: </i>${arr[i].answers[j].text}<br><br>`);
+                        page.insertAdjacentHTML('beforeend', `<b>Ответ ${(answersData[i].id + 1)}  - неправильный</b><br><i>Вопрос: </i>${arr[i].question}<br><i>Правильный ответ: </i>${arr[i].answers[j].text}<br><br>`);
                     }
                 } 
             }
