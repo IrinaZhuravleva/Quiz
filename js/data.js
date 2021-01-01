@@ -102,16 +102,15 @@ export default [
         'id': 18,
         'question': 'function logName(name) {<br />var n = name || "Mark";<br />console.log(n);<br />}<br />logName(); ',
         'answers': [{ 'id': 1, 'text': 'name'}, { 'id': 2, 'text': 'Mark'}],
-        'answer': 1
+        'answer': 2
     }, {
         'id': 19,
         'question': `const carDetails = {<br />
         name: "Ford Mustang",<br />
         getName(){<br />return this.name;<br />
-        },<br />
-        }<br />;
+        } };<br />
         var name = "Ford Ranger";<br />
-        var getCarName = carDetails.getName;<br />
+        var getCarName = carDetails.getName;<br /><br />
         console.log(getCarName());<br />
         console.log(getCarName.apply(carDetails));`,
         'answers': [{ 'id': 1, 'text': 'Ford Mustang//Ford Mustang'}, { 'id': 2, 'text': 'Ford Ranger//Ford Mustang'}],
@@ -140,7 +139,7 @@ export default [
         
     }, {
         'id': 23,
-        'question': 'Какая из функций вернет объект с аргументами?<br />function one() {<br />return arguments;<br />}<br /><br />const two = () => arguments;',
+        'question': 'Какая из функций вернет объект с аргументами?<br /><br />function one() {<br />return arguments;<br />}<br /><br />const two = () => arguments;',
         'answers': [{ 'id': 1, 'text': 'обе'}, { 'id': 2, 'text': 'первая'}, { 'id': 3, 'text': 'вторая'}],
         'answer': 2
     }, {
@@ -226,7 +225,7 @@ export default [
                     getFirst();<br />
                     getFirst([10,20,30]);`,
         'answers': [{ 'id': 1, 'text': 'undefined' }, { 'id': 2, 'text': '0 // 10' }],
-        'answer': 1
+        'answer': 2
     }, {
         'id': 34,
         'question': `function getArr({ nums } = { nums: [1, 2, 3, 4] }){<br />
