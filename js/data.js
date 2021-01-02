@@ -91,7 +91,7 @@ export default [
         'id': 16,
         'question': '  "\"use strict\";<br />function showMeThis(){<br />return this;<br />}<br />showMeThis();',
         'answers': [{ 'id': 1, 'text': 'Консоль выведет объект Windows' }, { 'id': 2, 'text': 'Консоль выведет undefined'}],
-        'answer': 1
+        'answer': 2
     }, {
         'id': 17,
         'question': 'Можно ли продублировать имя переменной? <br />function someFunc(a, b, b, c){<br />}',
