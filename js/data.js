@@ -164,14 +164,20 @@ export default [
         // it's assigned to the new local variable a with a let keyword.
     }, {
         'id': 27,
-        'question': 'function giveMeX(showX) {<br />if (showX) {<br />var x = 5;<br />}<br />return x;<br /}<br /> <br /console.log(giveMeX(false));<br /console.log(giveMeX(true));',
+        'question': `function giveMeX(showX) {<br />if (showX) {<br />
+            var x = 5;<br />}<br />return x;<br /}<br /><br />
+            console.log(giveMeX(false));<br />
+            console.log(giveMeX(true));`,
         'answers': [{ 'id': 1, 'text': 'undefined//5' }, { 'id': 2, 'text': 'ReferenceError' }],
         'answer': 1
         // Variables declared with var keyword are function scoped.
         // If you are wondering why it logs undefined in the first console.log statement remember variables declared without an initial value has a default value of undefined.
     }, {
         'id': 28,
-        'question': 'function giveMeX(showX) {<br />if (showX) {<br />let x = 5;<br />}<br />return x;<br /}<br /> <br /console.log(giveMeX(false));<br /console.log(giveMeX(true));',
+        'question': `function giveMeX(showX) {<br />if (showX) {<br />
+            let x = 5;<br />}<br />return x;<br /}<br /><br />
+            console.log(giveMeX(false));<br />
+            console.log(giveMeX(true));`,
         'answers': [{ 'id': 1, 'text': 'undefined//5' }, { 'id': 2, 'text': 'ReferenceError' }],
         'answer': 2
         // Variables declared with let and const keyword are block scoped.
