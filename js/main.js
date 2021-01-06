@@ -4,6 +4,8 @@ import arr from './data.js';
 const app = document.getElementById('app');
 const a = document.getElementsByClassName('radio-block__real');
 const buttonNext = document.getElementsByClassName('button--next');
+const card = document.getElementById('card');
+
 const wrongAnswers = [];
 let index = 0;
 //Массив с ответами пользователя
@@ -34,12 +36,12 @@ app.addEventListener('click', function (event) {
     }
 
     // let itemId = document.querySelector('#hidden').innerText;
-    let itemId = document.querySelector('#card').getAttribute('data-card');
+    
   
     if (target.hasAttribute("data-prev") && itemId != 0) {
         //index надо брать из номера вопроса, например
     //     app.innerHTML = '';
-
+            const itemId = card.getAttribute('data-card');
             console.log(itemId);
     //     render(arr[index - 1], arr.length, (index - 1));
     //     index = index - 1;
@@ -72,6 +74,8 @@ function gettingInputData(array, page) {
                 index = index + 1;
                 render(arr[index], arr.length, index);
             } else {
+                
+                // element.removeAttribute(attrName);
                //Рендерится текст вопроса, на который дан неправильный ответ 
                 for (let i = 0; i < arr.length; i++) {
                     if (arr[i].answer != answersData[i].answer) {

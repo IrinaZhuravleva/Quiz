@@ -9,7 +9,7 @@ context('Misc', () => {
         cy
             .get('.button--next')
             // .should('have.attr', 'data-next');
-            .should('have.css', 'background-color', 'rgb(239, 239, 239');
+            .should('have.css', 'background-color', 'rgb(239, 239, 239)');
 
         cy.get('.radio-group label:first').click();
 
@@ -31,7 +31,7 @@ context('Misc', () => {
         cy
             .get('.button--next')
             // .should('have.attr', 'data-next');
-            .should('have.css', 'background-color', 'rgb(239, 239, 239');
+            .should('have.css', 'background-color', 'rgb(239, 239, 239)');
 
         cy.get('.radio-group label:first').click();
         
@@ -47,5 +47,8 @@ context('Misc', () => {
         cy
             .get('#card')
             .should('have.attr', 'data-card', 2);
+
+        //потом надо нажать и увидеть текст либо с ошибками, либо со Спасибо,
+        // т.е. проверить, что у app  исчез дочерний элемент #card
     })
 })
