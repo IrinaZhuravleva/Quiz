@@ -38,6 +38,8 @@ app.addEventListener('click', function (event) {
     //     render(arr[index - 1], arr.length, (index - 1));
     //     index = index - 1;
     //     //перезаписать локал сторидж
+    // как сюда подставить чекнутый чекбокс из локал сторидж?
+    // пройтись по массиву инпутов и тому, кто с value = item.value из testJS проставить property checked true
     }
 });
 

@@ -289,10 +289,24 @@ export default [
         'answers': [{ 'id': 1, 'text': 'I am a function expression // error' }, { 'id': 2, 'text': 'I am a function expression // I am a function declaration' }],
         'answer': 1
         //I am a function declaration не всплывает I wont be hoisted
+
+     }, {
+        'id': 40,
+        'question': `Правильная ли запись?<br />reduceAdd.apply(obj1, [1, 2, 3, 4, 5]);<br />
+        reduceAdd.call(obj2, 1, 2, 3, 4, 5);`,
+        'answers': [{ 'id': 1, 'text': 'да' }, { 'id': 2, 'text': 'нет' }],
+        'answer': 1
+        // The only difference between apply and call is how we pass the arguments in the
+        // function being called.In apply we pass the arguments as an array and in call we pass the arguments directly in the argument list.
      // }, {
-    //     'id': ,
-    //     'question': ``,
-    //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-    //     'answer': 1
+     //     'id': ,
+     //     'question': ``,
+     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+     //     'answer': 1
+      // }, {
+      //     'id': ,
+      //     'question': ``,
+      //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+      //     'answer': 1
     }
 ]
