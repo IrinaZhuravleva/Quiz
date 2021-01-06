@@ -8,13 +8,24 @@ context('Misc', () => {
     it('click on first radio-button', () => {
         cy
             .get('.button--next')
-            .should('be.disabled');
+            // .should('have.attr', 'data-next');
+            .should('have.css', 'background-color', 'rgb(212, 212, 212)');
 
-        // cy.get('.radio-group label:first').click();
+        cy.get('.radio-group label:first').click();
 
-        // cy
-        //     .get('.button--next')
-        //     .should('not.be.disabled');
-            // .should('have.css', 'background-color', '#09ac0c');
+        cy
+            .get('.button--next')
+            .should('not.be.disabled');
+
+        cy
+            .get('.button--next')
+            .click();
+
+        //здесь 
+        cy
+            .get('#plate')
+            .should('have.attr', 'data-card', 2);
+            //атрибут должен увеличиться на 1
+        
     })
 })

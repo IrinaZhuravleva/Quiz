@@ -33,7 +33,9 @@ app.addEventListener('click', function (event) {
         gettingInputData([...a], app);
     }
 
-    let itemId = document.querySelector('#hidden').innerText;
+    // let itemId = document.querySelector('#hidden').innerText;
+    let itemId = document.querySelector('#card').getAttribute('data-card');
+  
     if (target.hasAttribute("data-prev") && itemId != 0) {
         //index надо брать из номера вопроса, например
     //     app.innerHTML = '';

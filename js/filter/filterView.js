@@ -20,7 +20,7 @@ export default function render(item, arrayLength, i) {
         return answersArr.join("");
     };
     const markup = `
-        <div class="plate" data-card="2">
+        <div class="plate" id="card" data-card="${item.id}">
             <div class="plate-header">
                 <div class="plate-header__icon">
                     <img src="img/icons/list.png" alt="Icon" />
@@ -30,7 +30,7 @@ export default function render(item, arrayLength, i) {
                 </div>
             </div>
             <div class="plate-content">
-                <div id="hidden" class="hidden">${item.id}</div>
+               
                 <h2 class="title-main" data-question>${item.question}</h2>
                 <div class="radio-group">${renderAnswers(item.answers)}</div>
             </div>
