@@ -16,7 +16,7 @@ buttonNext.disabled = 'true';
 // buttonNext.setAttribute("style", "background-color: blue");
 // buttonNext.setAttribute("style", "background: blue");
 // debugger
-buttonNext[0].style.background = '#d4d4d4';
+buttonNext[0].style.background = 'rgb(239, 239, 239';
 
 app.addEventListener('click', function (event) {   
     let target = event.target;

@@ -9,7 +9,7 @@ context('Misc', () => {
         cy
             .get('.button--next')
             // .should('have.attr', 'data-next');
-            .should('have.css', 'background-color', 'rgb(212, 212, 212)');
+            .should('have.css', 'background-color', 'rgb(239, 239, 239');
 
         cy.get('.radio-group label:first').click();
 
@@ -31,7 +31,7 @@ context('Misc', () => {
         cy
             .get('.button--next')
             // .should('have.attr', 'data-next');
-            .should('have.css', 'background-color', 'rgb(212, 212, 212)');
+            .should('have.css', 'background-color', 'rgb(239, 239, 239');
 
         cy.get('.radio-group label:first').click();
         
