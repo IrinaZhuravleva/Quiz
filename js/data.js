@@ -298,15 +298,30 @@ export default [
         'answer': 1
         // The only difference between apply and call is how we pass the arguments in the
         // function being called.In apply we pass the arguments as an array and in call we pass the arguments directly in the argument list.
-     // }, {
-     //     'id': ,
-     //     'question': ``,
-     //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-     //     'answer': 1
+     }, {
+         'id': 41,
+         'question': `Что делает функция?<br />var a = Math.max.apply(Math, arr);`,
+         'answers': [{ 'id': 1, 'text': 'ищет максимальное число в массиве' }, { 'id': 2, 'text': 'так нельзя записать' }],
+         'answer': 1
       // }, {
       //     'id': ,
       //     'question': ``,
       //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
       //     'answer': 1
+       // }, {
+       //     'id': ,
+       //     'question': ``,
+       //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+       //     'answer': 1
+        // }, {
+        //     'id': ,
+        //     'question': ``,
+        //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+        //     'answer': 1
+         // }, {
+         //     'id': ,
+         //     'question': ``,
+         //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
+         //     'answer': 1
     }
 ]
