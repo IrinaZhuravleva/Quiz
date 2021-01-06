@@ -23,7 +23,7 @@ context('Misc', () => {
 
         //здесь 
         cy
-            .get('#plate')
+            .get('#card')
             .should('have.attr', 'data-card', 2);
             //атрибут должен увеличиться на 1
         
