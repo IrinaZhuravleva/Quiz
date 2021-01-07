@@ -7,10 +7,10 @@ context('Misc', () => {
 
     it('check sequence of cards forward', () => {
 
-        for (var i = 1; i < 47; i ++ ){
-        
-        cy.cardCycle(1);
-}
+        for (var i = 1; i < 48; i ++ ){
+                
+            cy.cardCycle(i);
+        }
         cy.lastCard();
 
         //потом надо нажать и увидеть текст либо с ошибками, либо со Спасибо,
