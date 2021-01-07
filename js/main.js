@@ -74,7 +74,7 @@ function gettingInputData(array, page) {
                 index = index + 1;
                 render(arr[index], arr.length, index);
             } else {
-                page.insertAdjacentHTML('beforeend', <p>Спасибо!</p>);
+                page.insertAdjacentHTML('beforeend', '<p>Спасибо!</p>');
                 // element.removeAttribute(attrName);
                //Рендерится текст вопроса, на который дан неправильный ответ 
                 for (let i = 0; i < arr.length; i++) {
