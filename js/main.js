@@ -69,6 +69,7 @@ function gettingInputData(array, page) {
         if (item.checked) {
             let newAnswer = getInput(index, item.value);
             answersData.push(newAnswer);
+            console.log(answersData);
             page.innerHTML = '';
             if (index < (arr.length - 1)) {
                 index = index + 1;

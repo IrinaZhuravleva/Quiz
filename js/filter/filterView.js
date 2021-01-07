@@ -8,7 +8,7 @@ export default function render(item, arrayLength, i) {
                             type="radio"
                             name = "answerText"
                             class="radio-block__real"
-                            value="${i}"
+                            value = "${answer.id}"
                         />
                         <div class="radio-block__fake"></div>
                         <div class="radio-block__text">
