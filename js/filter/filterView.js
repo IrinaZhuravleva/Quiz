@@ -8,7 +8,7 @@ export default function render(item, arrayLength, i) {
                             type="radio"
                             name = "answerText"
                             class="radio-block__real"
-                            value="${i + 1}"
+                            value="${i}"
                         />
                         <div class="radio-block__fake"></div>
                         <div class="radio-block__text">
@@ -20,7 +20,7 @@ export default function render(item, arrayLength, i) {
         return answersArr.join("");
     };
     const markup = `
-        <div class="plate" id="card" data-card="${i + 1}">
+        <div class="plate" id="card" data-card="${i}">
             <div class="plate-header">
                 <div class="plate-header__icon">
                     <img src="img/icons/list.png" alt="Icon" />
