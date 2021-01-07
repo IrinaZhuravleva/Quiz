@@ -23,3 +23,60 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+// Cypress.Commands.add('cardCycle', title => {
+Cypress.Commands.add('cardCycle', index => {
+
+        //цвет кнопки Далее disabled
+        cy
+            .get('.button--next')
+            .should('have.css', 'background-color', 'rgb(239, 239, 239)');
+
+        //клик на первом radio-btn
+        cy
+            .get('.radio-group label:first')
+            .click();
+
+        //кнопка Далее is not disabled
+        cy
+            .get('.button--next')
+            .should('not.be.disabled');
+
+        //клик по кнопке Далее
+        cy
+            .get('.button--next')
+            .click();
+
+        //рендеринг следующей карточки на странице
+        cy
+            .get('#card')
+            .should('have.attr', 'data-card', index);
+});
+
+Cypress.Commands.add('lastCard', () => {
+
+    //цвет кнопки Далее disabled
+    cy
+        .get('.button--next')
+        .should('have.css', 'background-color', 'rgb(239, 239, 239)');
+
+    //клик на первом radio-btn
+    cy
+        .get('.radio-group label:first')
+        .click();
+
+    //кнопка Далее is not disabled
+    cy
+        .get('.button--next')
+        .should('not.be.disabled');
+
+    //клик по кнопке Далее
+    cy
+        .get('.button--next')
+        .click();
+
+    //рендеринг финальной страницы
+    cy.get('p').contains('Спасибо!')
+    // cy
+    //     .get('#card')
+    //     .should('have.attr', 'data-card', index);
+});

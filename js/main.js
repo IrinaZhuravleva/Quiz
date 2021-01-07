@@ -74,7 +74,7 @@ function gettingInputData(array, page) {
                 index = index + 1;
                 render(arr[index], arr.length, index);
             } else {
-                
+                page.insertAdjacentHTML('beforeend', <p>Спасибо!</p>);
                 // element.removeAttribute(attrName);
                //Рендерится текст вопроса, на который дан неправильный ответ 
                 for (let i = 0; i < arr.length; i++) {
@@ -86,7 +86,7 @@ function gettingInputData(array, page) {
                 }
 
                 if (!wrongAnswers.length) {
-                    page.innerHTML = 'Поздравляем! Вы правильно ответили на все вопросы.<br><br>';
+                    page.innerHTML = '<p>Спасибо!</p>Поздравляем! Вы правильно ответили на все вопросы.<br><br>';
                 } 
             }
         }
