@@ -11,22 +11,14 @@ let index = 0;
 //Массив с ответами пользователя
 let answersData = [];
 
+//cущности из реального мира соотносятся с сущностями из кода 
+
 render(arr[0], arr.length, 0, true);
 buttonNext.disabled = 'true';
 buttonNext[0].style.background = 'rgb(239, 239, 239)';
 
 app.addEventListener('change', function (event) {
     console.log('ok');
-    let input = event.target;
-    let newAnswer = getInput(index, input.value);
-    answersData = answersData.filter(item => item.id != newAnswer.id);
-    // отфильтрует массив - вернет массив с items которые не равны этому id
-    // newAnswer должен заменить такой же id в answersData
-
-    answersData.push(newAnswer);
-    // console.log(newAnswer.id);
-    console.log(answersData);
-    // console.log(result);
 })
 
 app.addEventListener('click', function (event) {
@@ -63,12 +55,24 @@ function getInput(index, answer) {
     }
 };
 
+function updateUserAnswers() {
+    let newAnswer = getInput(index, item.value);
+    const result = answersData.filter(item => item.id != newAnswer.id);
+    // answersData.push(newAnswer);
+    console.log(answersData);
+    console.log(result);
+
+    //доделать
+}
+
 function gettingInputData(array, page) {
     array.forEach(item => {
         if (item.checked) {
-            let newAnswer = getInput(index, item.value);
-            answersData.push(newAnswer);
-            console.log(answersData);
+            // let newAnswer = getInput(index, item.value);
+            // answersData.push(newAnswer);
+            // console.log(answersData);
+            updateUserAnswers();
+            
             page.innerHTML = '';
             if (index < (arr.length - 1)) {
                 index = index + 1;

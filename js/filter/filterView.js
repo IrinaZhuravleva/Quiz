@@ -1,6 +1,6 @@
 // import * as data from '../data.js';
 
-export default function render(item, arrayLength, i) {
+export default function render(item, arrayLength, i, flag, userAnswer) {
     function renderAnswers(answers) {
         let answersArr = answers.map(function (answer) {
             return `<label class="radio-block">
@@ -19,6 +19,28 @@ export default function render(item, arrayLength, i) {
 
         return answersArr.join("");
     };
+
+    function renderCheckedAnswers(answers) {
+        let answersArr = answers.map(function (answer) {
+           
+            return `<label class="radio-block">
+                        <input
+                            type="radio"
+                            name = "answerText"
+                            class="radio-block__real"
+                            value = "${answer.id}"
+                            ${answer.id == userAnswer ? 'checked' : ''}
+                        />
+                        <div class="radio-block__fake"></div>
+                        <div class="radio-block__text">
+                            ${answer.text}
+                        </div>
+                    </label>`
+        });
+
+        return answersArr.join("");
+    };
+
     const markup = `
         <div class="plate" id="card" data-card="${i}">
             <div class="plate-header">
@@ -32,7 +54,7 @@ export default function render(item, arrayLength, i) {
             <div class="plate-content">
                
                 <h2 class="title-main" data-question>${item.question}</h2>
-                <div class="radio-group">${renderAnswers(item.answers)}</div>
+                <div class="radio-group">${flag ? renderAnswers(item.answers) : renderCheckedAnswers(item.answers)}</div>
             </div>
             <div class="plate-footer">
                 <div class="plate-footer__buttons">
