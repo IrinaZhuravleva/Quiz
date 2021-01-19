@@ -2,7 +2,7 @@
 
 context('Misc', () => {
     beforeEach(() => {
-        cy.visit('https://irinazhuravleva.github.io/Quiz/')
+        cy.visit('http://127.0.0.1:5501/')
     })
 
     it('check sequence of cards forward', () => {

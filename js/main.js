@@ -1,6 +1,6 @@
 import render from './filter/filterView.js';
-// import arr from './data.js';
-import arr from './data-test.js';
+import arr from './data.js';
+// import arr from './data-test.js';
 
 const app = document.getElementById('app');
 const a = document.getElementsByClassName('radio-block__real');
