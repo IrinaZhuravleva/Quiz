@@ -1,5 +1,4 @@
 // import * as data from '../data.js';
-
 export default function render(item, arrayLength, i, flag, userAnswer) {
     function renderAnswers(answers) {
         let answersArr = answers.map(function (answer) {
@@ -58,7 +57,7 @@ export default function render(item, arrayLength, i, flag, userAnswer) {
             </div>
             <div class="plate-footer">
                 <div class="plate-footer__buttons">
-                    <button class="button button--back" data-prev>Назад</button>
+                    
                     <button val="index" class="button button--next" data-next>Далее</button>
 
                 </div>
@@ -67,4 +66,5 @@ export default function render(item, arrayLength, i, flag, userAnswer) {
         `;
     
     document.querySelector('#app').insertAdjacentHTML('afterbegin', markup);
+    // <button class="button button--back" data-prev>Назад</button>
 }

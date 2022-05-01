@@ -348,23 +348,11 @@ export default [
                 person.logPersonInfo();`,
              'answers': [{ 'id': 1, 'text': 'This is John from Moscow' }, { 'id': 2, 'text': 'This is Alex from Boston' }, { 'id': 3, 'text': 'This is Alex from Colorado' }],
              'answer': 2
-
-
-
          // }, {
          //     'id': ,
          //     'question': ``,
          //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
          //     'answer': 1
-         // }, {
-         //     'id': ,
-         //     'question': ``,
-         //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-         //     'answer': 1
-         // }, {
-         //     'id': ,
-         //     'question': ``,
-         //     'answers': [{ 'id': 1, 'text': '' }, { 'id': 2, 'text': '' }],
-         //     'answer': 1
+        
     }
 ]

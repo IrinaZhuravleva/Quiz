@@ -35,11 +35,16 @@ app.addEventListener('click', function (event) {
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
         buttonNext[0].style.background = '#09ac0c';
+        
+        // let newAnswer = getInput(index, item.value);
+        // let newAnswer = getInput(index);
+        // answersData.push(newAnswer);
+        // console.log(answersData);
     }
 
     if (target.hasAttribute("data-next")) {
         //собрать данные с предыдущего ответа
-        gettingInputData([...a], app);
+        gettingInputData([...a], app); //изменила 02марта
 
     }
 
@@ -57,6 +62,7 @@ app.addEventListener('click', function (event) {
 
 //собрать данные с предыдущего ответа 
 function getInput(index, answer) {
+    // debugger
     return {
         id: index,
         answer: answer
@@ -66,9 +72,9 @@ function getInput(index, answer) {
 function gettingInputData(array, page) {
     array.forEach(item => {
         if (item.checked) {
-            let newAnswer = getInput(index, item.value);
-            answersData.push(newAnswer);
-            console.log(answersData);
+            // let newAnswer = getInput(index, item.value);
+            // answersData.push(newAnswer);
+            // console.log(answersData);
             page.innerHTML = '';
             if (index < (arr.length - 1)) {
                 index = index + 1;

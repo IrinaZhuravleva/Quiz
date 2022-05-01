@@ -2,12 +2,13 @@
 
 context('Misc', () => {
     beforeEach(() => {
-        cy.visit('http://127.0.0.1:5501/')
+        cy.visit('http://127.0.0.1:5503/')
     })
 
     it('check sequence of cards forward', () => {
 
-        for (var i = 1; i < 48; i ++ ){
+        // for (var i = 1; i < 48; i ++ ){
+        for (var i = 1; i < 2; i++) {
                 
             cy.cardCycle(i);
         }
