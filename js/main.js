@@ -5,10 +5,11 @@ import arr from './data.js';
 const app = document.getElementById('app');
 const a = document.getElementsByClassName('radio-block__real');
 const buttonNext = document.getElementsByClassName('button--next');
+const buttonAnswer = document.getElementsByClassName('button--answer');
+const cheatCode = document.getElementsByClassName('cheat');
 
 const wrongAnswers = [];
 let index = 0;
-//Массив с ответами пользователя
 let answersData = [];
 
 render(arr[0], arr.length, 0, true);
@@ -16,7 +17,6 @@ buttonNext.disabled = 'true';
 buttonNext[0].style.background = 'rgb(239, 239, 239)';
 
 app.addEventListener('change', function (event) {
-    console.log('ok');
     let input = event.target;
     let newAnswer = getInput(index, input.value);
     answersData = answersData.filter(item => item.id != newAnswer.id);
@@ -24,9 +24,7 @@ app.addEventListener('change', function (event) {
     // newAnswer должен заменить такой же id в answersData
 
     answersData.push(newAnswer);
-    // console.log(newAnswer.id);
     console.log(answersData);
-    // console.log(result);
 })
 
 app.addEventListener('click', function (event) {
@@ -35,20 +33,15 @@ app.addEventListener('click', function (event) {
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
         buttonNext[0].style.background = '#09ac0c';
-        
-        // let newAnswer = getInput(index, item.value);
-        // let newAnswer = getInput(index);
-        // answersData.push(newAnswer);
-        // console.log(answersData);
     }
 
     if (target.hasAttribute("data-next")) {
+        // console.log('ok');
+        console.log(target);
         //собрать данные с предыдущего ответа
-        gettingInputData([...a], app); //изменила 02марта
-
+        gettingInputData([...a], app);
     }
 
-    // let itemId = document.querySelector('#hidden').innerText;
     let itemId = document.getElementById('card').getAttribute('data-card');
 
     if (target.hasAttribute("data-prev") && itemId != 0) {
@@ -58,11 +51,16 @@ app.addEventListener('click', function (event) {
         index = prevItemId;
         render(arr[prevItemId], arr.length, prevItemId, false, prevItemAnswer);
     }
+
+    if (target.hasAttribute('data-showAnswer')) {
+        console.log(buttonAnswer);
+        buttonAnswer[0].style.display = 'none';
+        cheatCode[0].style.display = 'flex';
+    }
 });
 
 //собрать данные с предыдущего ответа 
 function getInput(index, answer) {
-    // debugger
     return {
         id: index,
         answer: answer

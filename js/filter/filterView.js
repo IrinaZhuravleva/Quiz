@@ -59,12 +59,16 @@ export default function render(item, arrayLength, i, flag, userAnswer) {
                 <div class="plate-footer__buttons">
                     
                     <button val="index" class="button button--next" data-next>Далее</button>
+                    <div id="showAnswer">
+                        <button val="index" class="button button--answer" data-showAnswer>Показать ответ</button>
+                        <div class="cheat">Номер ответа: ${item.answer}</div>
+                    </div>
 
                 </div>
             </div>
         </div>
         `;
-    
+    // 
     document.querySelector('#app').insertAdjacentHTML('afterbegin', markup);
     // <button class="button button--back" data-prev>Назад</button>
 }
