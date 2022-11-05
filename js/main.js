@@ -1,6 +1,6 @@
 import render from './filter/filterView.js';
-import arr from './data.js';
-// import arr from './data-test.js';
+import data from './data.js';
+// import data from './data-test.js';
 
 const app = document.getElementById('app');
 const a = document.getElementsByClassName('radio-block__real');
@@ -11,6 +11,7 @@ const cheatCode = document.getElementsByClassName('cheat');
 const wrongAnswers = [];
 let index = 0;
 let answersData = [];
+const arr = shuffle(data);
 
 render(arr[0], arr.length, 0, true);
 buttonNext.disabled = 'true';
@@ -20,9 +21,6 @@ app.addEventListener('change', function (event) {
     let input = event.target;
     let newAnswer = getInput(index, input.value);
     answersData = answersData.filter(item => item.id != newAnswer.id);
-    // отфильтрует массив - вернет массив с items которые не равны этому id
-    // newAnswer должен заменить такой же id в answersData
-
     answersData.push(newAnswer);
     console.log(answersData);
 })
@@ -33,12 +31,11 @@ app.addEventListener('click', function (event) {
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
         buttonNext[0].style.background = '#09ac0c';
+        buttonNext[0].style.color = '#ffffff';
     }
 
     if (target.hasAttribute("data-next")) {
-        // console.log('ok');
         console.log(target);
-        //собрать данные с предыдущего ответа
         gettingInputData([...a], app);
     }
 
@@ -59,7 +56,6 @@ app.addEventListener('click', function (event) {
     }
 });
 
-//собрать данные с предыдущего ответа 
 function getInput(index, answer) {
     return {
         id: index,
@@ -70,9 +66,6 @@ function getInput(index, answer) {
 function gettingInputData(array, page) {
     array.forEach(item => {
         if (item.checked) {
-            // let newAnswer = getInput(index, item.value);
-            // answersData.push(newAnswer);
-            // console.log(answersData);
             page.innerHTML = '';
             if (index < (arr.length - 1)) {
                 index = index + 1;
@@ -95,4 +88,12 @@ function gettingInputData(array, page) {
             }
         }
     });
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    };
+    return array;
 }
