@@ -7,11 +7,12 @@ const a = document.getElementsByClassName('radio-block__real');
 const buttonNext = document.getElementsByClassName('button--next');
 const buttonAnswer = document.getElementsByClassName('button--answer');
 const cheatCode = document.getElementsByClassName('cheat');
+const chosenCountWrapper = document.getElementsByClassName('chosen-count-wrapper');
 
 const wrongAnswers = [];
 let index = 0;
 let answersData = [];
-const arr = shuffle(data);
+let arr = shuffle(data);
 
 render(arr[0], arr.length, 0, true);
 buttonNext.disabled = 'true';
@@ -22,12 +23,11 @@ app.addEventListener('change', function (event) {
     let newAnswer = getInput(index, input.value);
     answersData = answersData.filter(item => item.id != newAnswer.id);
     answersData.push(newAnswer);
-    console.log(answersData);
 })
 
 app.addEventListener('click', function (event) {
     let target = event.target;
-
+    let userCount = 0;
     if (target.closest('label')) {
         buttonNext.disabled = 'false';
         buttonNext[0].style.background = '#09ac0c';
@@ -35,14 +35,20 @@ app.addEventListener('click', function (event) {
     }
 
     if (target.hasAttribute("data-next")) {
-        console.log(target);
         gettingInputData([...a], app);
+    }
+
+    if (target.hasAttribute("data-chosen-count")) {
+        userCount = (document.querySelector(".chosen-count")).value;
+        chosenCountWrapper[0].style.display = 'none';
+        arr = arr.slice(0, +userCount);
     }
 
     let itemId = document.getElementById('card').getAttribute('data-card');
 
     if (target.hasAttribute("data-prev") && itemId != 0) {
         app.innerHTML = '';
+        arr = arr.slice(0, +userCount - 1);
         let prevItemId = itemId - 1;
         let prevItemAnswer = answersData[prevItemId].answer;
         index = prevItemId;

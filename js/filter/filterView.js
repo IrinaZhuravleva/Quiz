@@ -43,11 +43,17 @@ export default function render(item, arrayLength, i, flag, userAnswer) {
     const markup = `
         <div class="plate" id="card" data-card="${i}">
             <div class="plate-header">
-                <div class="plate-header__icon">
-                    <img src="img/icons/list.png" alt="Icon" />
+                <div class="title-wrapper">
+                    <div class="plate-header__icon">
+                        <img src="img/icons/list.png" alt="Icon" />
+                    </div>
+                    <div class="plate-header__title">
+                        Ваш уровень знания JS 
+                    </div>
                 </div>
-                <div class="plate-header__title">
-                    Ваш уровень знания JS // Вопрос: ${i + 1} из ${arrayLength}
+                <div class="chosen-count-wrapper">
+                    <input type="text" class="chosen-count" placeholder="Выберите число до ${arrayLength}" min="1" max="${arrayLength}">
+                    <button data-chosen-count>Подтвердить</button>
                 </div>
             </div>
             <div class="plate-content">
@@ -68,7 +74,8 @@ export default function render(item, arrayLength, i, flag, userAnswer) {
             </div>
         </div>
         `;
-    // 
+    
     document.querySelector('#app').insertAdjacentHTML('afterbegin', markup);
     // <button class="button button--back" data-prev>Назад</button>
+    // // Вопрос: ${i + 1} из ${arrayLength}
 }

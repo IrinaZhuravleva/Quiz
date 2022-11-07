@@ -229,12 +229,17 @@ body {
   background-color: #09ac0c;
   background-image: linear-gradient(to left, #19bf1c 0%, #398e3a 100%);
 }
+.title-wrapper {
+  display: flex;
+  align-items: center;
+}
 .plate-header {
   display: flex;
   align-items: center;
   height: 80px;
   padding: 0px 30px 0;
   border-bottom: 1px solid #e7e7e7;
+  justify-content: space-between;
 }
 .plate-header__icon {
   margin-right: 20px;
@@ -248,6 +253,9 @@ body {
   font-size: 22px;
   font-weight: 400;
   line-height: 1;
+}
+.chosen-count{
+  min-width: 200px;
 }
 .plate-footer {
   display: flex;
