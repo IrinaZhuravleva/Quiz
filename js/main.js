@@ -41,6 +41,9 @@ app.addEventListener('click', function (event) {
     if (target.hasAttribute("data-chosen-count")) {
         userCount = (document.querySelector(".chosen-count")).value;
         chosenCountWrapper[0].style.display = 'none';
+        if(Number(userCount) > arr.length || Number(userCount) < 0 ){
+            userCount = arr.length;
+        }
         arr = arr.slice(0, +userCount);
     }
 
@@ -48,7 +51,6 @@ app.addEventListener('click', function (event) {
 
     if (target.hasAttribute("data-prev") && itemId != 0) {
         app.innerHTML = '';
-        arr = arr.slice(0, +userCount - 1);
         let prevItemId = itemId - 1;
         let prevItemAnswer = answersData[prevItemId].answer;
         index = prevItemId;
